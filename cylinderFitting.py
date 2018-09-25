@@ -99,7 +99,7 @@ class CylinderFitting(object):
     def vmdCommands(self):
 
         commands  = "set bottom {{ {} {} {} }}\n".format(*self.bottom)
-        commands += "set bottom {{ {} {} {} }}\n".format(*self.top)
+        commands += "set top {{ {} {} {} }}\n".format(*self.top)
         commands += "draw material Transparent\n"
         commands += "draw color silver\n"
         commands += "draw cylinder $bottom $top radius {} resolution 100\n".format(self.r)
